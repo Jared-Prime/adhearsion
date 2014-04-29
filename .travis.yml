@@ -1,15 +1,7 @@
 language: ruby
 rvm:
-  - 1.9.2
   - 1.9.3
-  - 2.0.0
-  - jruby-19mode
-  - rbx-19mode
-  - ruby-head
-matrix:
-  allow_failures:
-    - rvm: rbx-19mode
-    - rvm: ruby-head
+  - 2.1.1
+  - jruby-1.7.4
+  - jruby-1.7.12
 env: ARUBA_TIMEOUT=120 RAILS_ENV=development AHN_ENV=development
-notifications:
-  irc: "irc.freenode.org#adhearsion"
