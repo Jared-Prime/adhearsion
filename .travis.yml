@@ -2,6 +2,5 @@ language: ruby
 rvm:
   - 1.9.3
   - 2.1.1
-  - jruby-1.7.4
-  - jruby-1.7.12
+  - jruby-19mode
 env: ARUBA_TIMEOUT=120 RAILS_ENV=development AHN_ENV=development
