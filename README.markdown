@@ -1,7 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/adhearsion.png)](https://rubygems.org/gems/adhearsion)
 [![Build Status](https://secure.travis-ci.org/Jared-Prime/adhearsion.png?branch=debugging/phoenix/release/2.0.1)](http://travis-ci.org/Jared-Prime/adhearsion)
 [![Dependency Status](https://gemnasium.com/adhearsion/adhearsion.png?travis)](https://gemnasium.com/adhearsion/adhearsion)
-[![Code Climate](https://codeclimate.com/github/adhearsion/adhearsion.png)](https://codeclimate.com/github/adhearsion/adhearsion)
+[![Code Climate](https://codeclimate.com/github/Jared-Prime/adhearsion.png)](https://codeclimate.com/github/Jared-Prime/adhearsion)
 [![Coverage Status](https://coveralls.io/repos/adhearsion/adhearsion/badge.png?branch=develop)](https://coveralls.io/r/adhearsion/adhearsion)
 
 # Adhearsion
