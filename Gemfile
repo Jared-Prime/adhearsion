@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'punchblock', :git => 'git@github.com:cloudvox/punchblock.git', :branch => 'develop-ifbyphone'
-gem 'has-guarded-handlers', :git => 'git@github.com:jared-prime/has-guarded-handlers.git', :branch => 'dumb_hacks'
 
 gemspec
 

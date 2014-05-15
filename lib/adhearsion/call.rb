@@ -147,11 +147,12 @@ module Adhearsion
     end
 
     def register_event_handler(*guards, &block)
+      logger.info "Registering event: #{guards}, #{block}"
       register_handler :event, *guards, &block
     end
 
     def deliver_message(message)
-      logger.debug "Receiving message: #{message.inspect}"
+      logger.info "Receiving message: #{message.inspect}"
       catching_standard_errors { trigger_handler :event, message }
     end
     alias << deliver_message
