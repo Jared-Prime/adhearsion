@@ -114,6 +114,7 @@ module Adhearsion
           raise PathInvalid, path unless ScriptAhnLoader.in_ahn_application?
           args = ARGV.dup
           args[1] = '.'
+          raise "args are: #{args}"
           ScriptAhnLoader.exec_script_ahn! args
         end
       end
