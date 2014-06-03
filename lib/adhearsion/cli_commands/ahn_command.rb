@@ -38,8 +38,9 @@ module Adhearsion
 
       desc "start </path/to/directory>", "Start the Adhearsion server in the foreground with a console"
       method_option :noconsole, type: :boolean, aliases: %w{--no-console}
+      method_option :java_opts, type: :string, aliases: %w{--java-opts}
       def start(path = nil)
-        start_app path, options[:noconsole] ? :simple : :console
+        start_app path, options
       end
 
       desc "daemon </path/to/directory>", "Start the Adhearsion server in the background"
@@ -97,8 +98,9 @@ module Adhearsion
 
       protected
 
-      def start_app(path, mode, pid_file = nil)
-        execute_from_app_dir! path
+      def start_app(path, options, pid_file = nil)
+        mode = options[:noconsole] ? :simple : :console
+        execute_from_app_dir! path, options.delete(:noconsole)
         say "Starting Adhearsion server at #{Dir.pwd}"
         Adhearsion::Initializer.start :mode => mode, :pid_file => pid_file
       end
@@ -114,7 +116,6 @@ module Adhearsion
           raise PathInvalid, path unless ScriptAhnLoader.in_ahn_application?
           args = ARGV.dup
           args[1] = '.'
-          raise "args are: #{args}"
           ScriptAhnLoader.exec_script_ahn! args
         end
       end
