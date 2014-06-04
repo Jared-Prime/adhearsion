@@ -12,12 +12,7 @@ module Adhearsion
       cwd = Dir.pwd
       return unless in_ahn_application? || in_ahn_application_subdirectory?
 
-      if in_ahn_application?
-        if jruby? && options[:java_opts]
-          jruby_exec! args, options[:java_opts]
-        else
-          exec RUBY, SCRIPT_AHN, *args
-        end
+        exec RUBY, '-J-Dcom.sun.management.snmp.port=9000 -S', SCRIPT_AHN, *args
       end
 
       Dir.chdir("..") do
