@@ -100,13 +100,8 @@ module Adhearsion
 
       def start_app(path, options, pid_file = nil)
         mode = options[:noconsole] ? :simple : :console
-        execute_from_app_dir! path, options.delete(:noconsole)
         say "Starting Adhearsion server at #{Dir.pwd}"
         Adhearsion::Initializer.start :mode => mode, :pid_file => pid_file
-      end
-
-      def execute_from_app_dir!(path)
-        return
       end
 
       def running_script_ahn?
